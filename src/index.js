@@ -1,12 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import App from './components/App'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App/>, document.querySelector('#root'));
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+
+
+
+
+// npm install --save redux react-redux
+// Redux Cycle Notes
+/* 
+Action Creator => Action => dispatch => Reducers => State
+    Action Creator: Function that returns a javascript object.
+    Action: A javascript object with type property and a payload property.
+    dispatch: Function that takes in an action, makes copies of that object and passes it off to different areas.
+    Reducers: Function that takes in an action and some pre-existing data and make some adjustments to the data and return it.
+    State: Central repo of data.
+*/
